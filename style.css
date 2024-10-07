@@ -191,6 +191,27 @@ header .container {
   header .container {
     gap: 2rem;
   }
+}
 
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
 
+  header .container {
+    grid-template-columns: auto 1fr auto auto;
+    gap: 3rem;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  #auth-signin {
+    display: block;
+  }
+
+  .btn-mobile {
+    display: none;
+  }
 }
