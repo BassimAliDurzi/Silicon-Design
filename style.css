@@ -178,3 +178,19 @@ header .container {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .btn-toggle-switch .label {
+    display: block;
+  }
+
+  header .container {
+    gap: 2rem;
+  }
+
+
+}
