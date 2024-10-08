@@ -366,6 +366,13 @@ header .container {
   }
 }
 
+#app-features {
+    .container {
+        display: flex;
+    }
+}
+
+
 footer {
   font-size: 14px;
   padding-top: 1rem;
