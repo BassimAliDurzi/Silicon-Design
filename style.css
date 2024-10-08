@@ -38,6 +38,12 @@ body {
   font-size: 16px;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
 .container {
   width: 100%;
   padding-left: var(--container-padding);
@@ -204,6 +210,7 @@ header .container {
   padding-bottom: 2rem;
 
   .container {
+    background-color: var(--clr-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -221,64 +228,13 @@ header .container {
   align-items: center;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-
-  .btn-toggle-switch .label {
-    display: block;
-  }
-
-  header .container {
-    gap: 2rem;
-  }
-
-  #brands {
-    display: block;
-  }
-
-  #brand-1,
-  #brand-2 {
-    display: none;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-
-  header .container {
-    grid-template-columns: auto 1fr auto auto;
-    gap: 3rem;
-  }
-
-  .navbar {
-    display: block;
-  }
-
-  #auth-signin {
-    display: block;
-  }
-
-  .btn-mobile {
-    display: none;
-  }
-
-  #brand-1,
-  #brand-2 {
-    display: flex;
-  }
-}
-
 #hero {
   background: rgb(99, 102, 241);
   background: linear-gradient(
     0deg,
     rgba(99, 102, 241, 0.1) 0%,
     rgba(218, 70, 239, 0.05) 42%,
-    rgba(241, 24, 253, 0.07) 83%
+    rgba(241, 244, 253, 0.07) 83%
   );
   padding-bottom: 2rem;
   overflow: hidden;
@@ -407,5 +363,80 @@ header .container {
         width: auto;
       }
     }
+  }
+}
+
+footer {
+  font-size: 14px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--clr-gray);
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .credit {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .btn-toggle-switch .label {
+    display: block;
+  }
+
+  header .container {
+    gap: 2rem;
+  }
+
+  #brands {
+    display: block;
+  }
+
+  #brand-1,
+  #brand-2 {
+    display: none;
+  }
+
+  footer {
+    .credit {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  header .container {
+    grid-template-columns: auto 1fr auto auto;
+    gap: 3rem;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  #auth-signin {
+    display: block;
+  }
+
+  .btn-mobile {
+    display: none;
+  }
+
+  #brand-1,
+  #brand-2 {
+    display: flex;
   }
 }
