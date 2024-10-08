@@ -250,7 +250,7 @@ header .container {
 
   .container {
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
     grid-template-columns: 1fr;
     grid-template-areas:
       "headline"
@@ -260,6 +260,13 @@ header .container {
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
         "headline headline"
+        "content images";
+    }
+
+    @media (min-width: 1400px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "headline images"
         "content images";
     }
   }
@@ -274,6 +281,10 @@ header .container {
 
       @media (min-width: 768px) {
         font-size: 56px;
+      }
+
+      @media (min-width: 1400px) {
+        text-align: left;
       }
     }
   }
@@ -308,11 +319,14 @@ header .container {
       justify-content: center;
       gap: 1rem;
       margin-top: 2rem;
-      
 
       @media (min-width: 768px) {
         justify-content: flex-start;
         margin-bottom: 2rem;
+      }
+
+      @media (min-width: 1400px) {
+        margin-top: 10rem;
       }
     }
   }
@@ -327,21 +341,32 @@ header .container {
     }
 
     .img-back {
-        position: absolute;
-        z-index: -10;
-        bottom: 0;
-        right: 100px;
-        width: 70%;
-        height: auto;
+      position: absolute;
+      z-index: -10;
+      bottom: 0;
+      right: 100px;
+      width: 70%;
+      height: auto;
+
+      @media (min-width: 1400px) {
+        bottom: -100px;
+        width: auto;
+        right: 230px;
+      }
     }
 
     .img-front {
-        position: absolute;
-        z-index: -5;
-        bottom: 0;
-        right: 0;
-        width: 70%;
-        height: auto;
+      position: absolute;
+      z-index: -5;
+      bottom: 0;
+      right: 0;
+      width: 70%;
+      height: auto;
+
+      @media (min-width: 1400px) {
+        bottom: -100px;
+        width: auto;
+      }
     }
   }
 }
