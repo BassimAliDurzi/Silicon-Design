@@ -5,6 +5,7 @@
   --clr-primary: #6366f1;
   --clr-gray: #9397ad;
   --clr-white: #ffffff;
+  --clr-feature-gray: #f3f6ff;
 
   --clr-border-gray: #e2e5f1;
 
@@ -367,11 +368,56 @@ header .container {
 }
 
 #app-features {
-    .container {
-        display: flex;
-    }
-}
+  .container {
+    display: flex;
+    padding-top: 1rem;
+  }
 
+  .app-image {
+    display: none;
+  }
+
+  h2,
+  #app-features-text {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 27.9px;
+    font-weight: 900;
+  }
+
+  #app-features-text {
+    font-size: 18px;
+  }
+
+  .feature-group {
+    display: block;
+    padding-bottom: 2rem;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+
+  .feature-img {
+    background-color: var(--clr-feature-gray);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: left;
+  }
+}
 
 footer {
   font-size: 14px;
