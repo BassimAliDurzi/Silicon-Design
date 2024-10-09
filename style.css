@@ -398,8 +398,8 @@ header .container {
 
   .feature {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 1rem;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
   }
 
   .feature-img {
@@ -416,6 +416,20 @@ header .container {
   p {
     font-size: 16px;
     text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+        font-size: 33.5px;
+    }
+
+    .feature-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
   }
 }
 
