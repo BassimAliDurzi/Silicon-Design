@@ -529,6 +529,7 @@ header .container {
 
     .tablet-images {
         display: flex;
+        gap: 0.25rem;
     }
 
     img {
@@ -545,8 +546,8 @@ header .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-left: 8rem;
-        padding-right: 8rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
     }
 
     h3 {
@@ -564,7 +565,46 @@ header .container {
     }
   }
 
-  @media
+  @media (min-width:1400px) {
+
+    .tablet-images, .tablet-text {
+        display: none;
+    }
+
+    .desktop-images {
+        display: flex;
+        gap: 2rem;
+        padding-bottom: 4rem;
+
+        img {
+            width: 328px;
+            height: 663px;
+        }
+    }
+
+    .desktop-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 800;
+        padding-bottom: 1rem;
+    }
+
+    p {
+        line-height: var(--line-height-p);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+  }
+
 }
 
 footer {
