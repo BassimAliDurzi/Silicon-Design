@@ -475,7 +475,7 @@ header .container {
 
   .container {
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -604,6 +604,10 @@ header .container {
     }
 
   }
+
+}
+
+#app-features-3 {
 
 }
 
