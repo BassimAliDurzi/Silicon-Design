@@ -6,11 +6,18 @@
   --clr-gray: #9397ad;
   --clr-white: #ffffff;
   --clr-feature-gray: #f3f6ff;
+  --clr-headlines-dark: #131022;
+  --clr-text:#585C7B;
+  ;
+  ;
 
   --clr-border-gray: #e2e5f1;
 
   --container-padding: 1rem;
   --transtion-time: all 0.2s;
+
+  --line-height-p:28.8px;
+  --line-height-headline:30.2px;
 }
 
 * {
@@ -37,6 +44,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 16px;
+  color: var(--clr-text);
 }
 
 .wrapper {
@@ -274,6 +282,7 @@ header .container {
     h1 {
       font-size: 36px;
       font-weight: 800;
+      color: var(--clr-headlines-dark);
 
       @media (min-width: 768px) {
         font-size: 56px;
@@ -296,6 +305,7 @@ header .container {
     p {
       font-size: 18px;
       margin-bottom: 3rem;
+      line-height: var(--line-height-p);
     }
 
     .buttons {
@@ -371,7 +381,7 @@ header .container {
   .container {
     display: flex;
     padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
   }
 
   .app-image {
@@ -381,15 +391,22 @@ header .container {
   h2,
   #app-features-text {
     text-align: center;
+    
   }
 
   h2 {
     font-size: 27.9px;
     font-weight: 900;
+    color: var(--clr-headlines-dark);
+  }
+
+  h3 {
+    color: var(--clr-headlines-dark);
   }
 
   #app-features-text {
     font-size: 18px;
+    line-height: var(--line-height-p);
   }
 
   .feature-group {
@@ -417,6 +434,7 @@ header .container {
   p {
     font-size: 16px;
     text-align: left;
+    line-height: var(--line-height-p);
   }
 
   @media (min-width: 768px) {
@@ -440,7 +458,7 @@ header .container {
     }
 
     h2,
-    #app-features-text  {
+    #app-features-text {
       text-align: left;
     }
 
@@ -455,6 +473,54 @@ header .container {
     }
   }
 }
+
+#app-features-2 {
+  .container {
+    background-color: var(--clr-feature-gray);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 27.9px;
+    font-weight: 800;
+    padding-bottom: 1rem;
+    color: var(--clr-headlines-dark);
+  }
+
+  .mobile-text {
+    h3 {
+        font-size: 21.6px;
+        font-weight: 800;
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: var(--clr-headlines-dark);
+    }
+
+    p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--clr-text);
+        line-height: var(--line-height-p);
+    }
+
+
+  }
+
+  .desktop-images,
+  .tablet-images,
+  .desktop-text,
+  .tablet-text {
+    display: none;
+  }
+}
+
 
 footer {
   font-size: 14px;
