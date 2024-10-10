@@ -7,17 +7,14 @@
   --clr-white: #ffffff;
   --clr-feature-gray: #f3f6ff;
   --clr-headlines-dark: #131022;
-  --clr-text:#585C7B;
-  ;
-  ;
-
+  --clr-text: #585c7b;
   --clr-border-gray: #e2e5f1;
 
   --container-padding: 1rem;
   --transtion-time: all 0.2s;
 
-  --line-height-p:28.8px;
-  --line-height-headline:30.2px;
+  --line-height-p: 28.8px;
+  --line-height-headline: 30.2px;
 }
 
 * {
@@ -391,7 +388,6 @@ header .container {
   h2,
   #app-features-text {
     text-align: center;
-    
   }
 
   h2 {
@@ -475,8 +471,9 @@ header .container {
 }
 
 #app-features-2 {
-  .container {
     background-color: var(--clr-feature-gray);
+
+  .container {
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
@@ -494,22 +491,21 @@ header .container {
 
   .mobile-text {
     h3 {
-        font-size: 21.6px;
-        font-weight: 800;
-        text-align: center;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        color: var(--clr-headlines-dark);
+      font-size: 21.6px;
+      font-weight: 800;
+      text-align: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      color: var(--clr-headlines-dark);
     }
 
     p {
-        text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        color: var(--clr-text);
-        line-height: var(--line-height-p);
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--clr-text);
+      line-height: var(--line-height-p);
     }
-
 
   }
 
@@ -519,8 +515,57 @@ header .container {
   .tablet-text {
     display: none;
   }
-}
 
+
+  @media (min-width: 768px) {
+    h2 {
+        font-size: 33.5px;
+        font-weight: 800;
+    }
+
+    .mobile-images {
+        display: none;
+    }
+
+    .tablet-images {
+        display: flex;
+    }
+
+    img {
+        width: 203.32px;
+        height: 410px;
+    }
+
+    .mobile-text {
+        display: none;
+    }
+
+    .tablet-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    h3 {
+        text-align: center;
+        color: var(--clr-headlines-dark);
+        line-height: var(--line-height-headline);
+        font-size: 22.7px;
+        font-weight: 800;
+    }
+
+    p {
+        text-align: center;
+        line-height: var(--line-height-p);
+        margin-top: -0.5rem;
+    }
+  }
+
+  @media
+}
 
 footer {
   font-size: 14px;
