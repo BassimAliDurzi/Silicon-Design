@@ -818,13 +818,13 @@ header .container {
     }
 
     details[open] summary .icon {
-        background-color: #6366f1;
-        box-shadow: 0 1px 10px var(--clr-primary);
-        -webkit-transform: rotate(180deg); 
-        
-        i {
-            color: var(--clr-white);
-        }
+      background-color: #6366f1;
+      box-shadow: 0 1px 10px var(--clr-primary);
+      -webkit-transform: rotate(180deg);
+
+      i {
+        color: var(--clr-white);
+      }
     }
   }
 
@@ -838,16 +838,111 @@ header .container {
     margin-top: 3rem;
     border: none;
     border-radius: 0.5rem;
-}
+  }
 
-  
-
-  .phone,
-  .sms {
+  .contact-methods {
     display: none;
   }
-}
 
+  @media (min-width: 768px) {
+    .contacts {
+      padding-left: 9rem;
+      padding-right: 9rem;
+
+      h2 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 41.6px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28.8px;
+      }
+    }
+
+    .contact-methods {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .phone,
+      .sms {
+        border: 1px solid var(--clr-border-gray);
+        border-radius: 0.5rem;
+        width: 344px;
+        height: 166px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        line-height: 1.5rem;
+
+        #phone-icon,
+        #sms-icon {
+          font-size: 24px;
+        }
+
+        button {
+          border: none;
+          background-color: var(--clr-white);
+          text-align: left;
+          margin-left: -0.3rem;
+          margin-top: 0.75rem;
+          font-size: 14px;
+          font-weight: 600;
+
+          i {
+            margin-left: 0.5rem;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          color: #565973;
+        }
+      }
+
+      .phone {
+        i,
+        button {
+          color: var(--clr-primary);
+        }
+      }
+
+      .sms {
+        i,
+        button {
+          color: #22c55e;
+        }
+      }
+    }
+
+    .questions {
+      border: none;
+
+      .faq {
+        margin-bottom: 1rem;
+        margin-left: -23rem;
+        margin-right: -23rem;
+        box-shadow: 2px 4px var(--clr-feature-gray);
+        border-radius: 0.5rem;
+
+        p {
+          max-width: 768px;
+        }
+      }
+    }
+
+    .contact-us {
+      display: none;
+    }
+  }
+}
 
 footer {
   font-size: 14px;
