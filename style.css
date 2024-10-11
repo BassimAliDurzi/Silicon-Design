@@ -735,6 +735,119 @@ header .container {
   }
 }
 
+#faqs {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .contacts {
+    h2 {
+      color: var(--clr-headlines-dark);
+      font-size: 24.7;
+      font-weight: 800;
+      text-align: center;
+      line-height: var(--line-height-headline);
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: var(--line-height-p);
+      padding: 0 0.5rem 2rem 0.5rem;
+    }
+  }
+
+  .questions {
+    border: 0.5px solid var(--clr-border-gray);
+    border-radius: 0.5rem;
+
+    .faq {
+      border: 0.5px solid var(--clr-border-gray);
+      padding: 1rem;
+    }
+
+    details {
+      summary {
+        list-style: none;
+        color: var(--clr-headlines-dark);
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22.4px;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          margin-right: 2rem;
+        }
+
+        .icon {
+          width: 36px;
+          height: 36px;
+          background-color: var(--clr-feature-gray);
+          text-align: center;
+          align-content: center;
+          border-radius: 50%;
+          position: absolute;
+          right: 0;
+
+          i {
+            color: #3e4265;
+          }
+        }
+      }
+
+      p {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 1rem;
+        font-size: 14px;
+        line-height: var(--line-height-p);
+      }
+    }
+
+    details[open] summary .icon {
+        background-color: #6366f1;
+        box-shadow: 0 1px 10px var(--clr-primary);
+        -webkit-transform: rotate(180deg); 
+        
+        i {
+            color: var(--clr-white);
+        }
+    }
+  }
+
+  .contact-us {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    font-size: 14px;
+    font-weight: 600;
+    width: 162.29px;
+    height: 49.5px;
+    margin-top: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+  
+
+  .phone,
+  .sms {
+    display: none;
+  }
+}
+
 
 footer {
   font-size: 14px;
