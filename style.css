@@ -950,6 +950,79 @@ header .container {
       display: none;
     }
   }
+
+  @media (min-width: 1400px) {
+    .container {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    .contacts {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 416px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 3rem;
+      margin-left: 6rem;
+
+      h2 {
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 41.6px;
+        text-align: left;
+        padding-right: 4rem;
+      }
+
+      p {
+        text-align: left;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28.8px;
+        margin-left: 1.5rem;
+        padding-bottom: 0;
+      }
+    }
+
+    .contact-methods {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      margin-left: 8rem;
+      margin-top: -2rem;
+
+      .phone,
+      .sms {
+        border: none;
+        width: 196px;
+        height: 166px;
+
+        p {
+          font-size: 12px;
+          font-weight: 400;
+        }
+
+        button {
+            cursor: pointer;
+        }
+      }
+    }
+
+    .questions {
+      grid-column: 3 / -1;
+      grid-row: 1 / -1;
+      margin-left: -15rem;
+      margin-right: 30rem;
+      margin-top: -13rem;
+
+      .faq {
+        background-color: var(--clr-white);
+        width: 746px;
+        row-gap: 16px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 footer {
