@@ -1076,6 +1076,7 @@ header .container {
       width: 220.73;
       border-radius: 0.5rem 0 0 0.5rem;
       border: 1px solid var(--clr-border-gray);
+      padding-left: 1rem;
     }
 
     #sub {
@@ -1159,13 +1160,25 @@ footer {
 
   .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    
   }
 
-  .credit {
-    display: none;
+
+  @media (min-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+
   }
 }
 
