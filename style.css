@@ -4,7 +4,6 @@
   --clr-primary: #6366f1;
   --clr-headline: #0b0f19;
   --clr-navbar: #33354d;
-  --clr-darkmode: #565973;
   --clr-text: #565973;
   --clr-text-btn: #ffffff;
   --clr-toggle-bg: #9397ad;
@@ -16,6 +15,7 @@
   --clr-icon-open: #ffffff;
   --clr-faq-bg: #ffffff;
   --clr-border: #e2e3eb;
+  --clr-btn-app-bg: #0b0f19;
 
   --container-padding: 1rem;
   --transtion-time: all 0.2s;
@@ -27,9 +27,25 @@
   color-scheme: light;
 } */
 
-/* .dark {
+.dark {
   color-scheme: dark;
-} */
+
+  --clr-primary: #6366f1;
+  --clr-headline: #ffffff;
+  --clr-navbar: #ffffff;
+  --clr-text: #ffffff;
+  --clr-text-btn: #ffffff;
+  --clr-toggle-bg: #9397ad;
+  --clr-brand-bg: #101627;
+  --clr-feature-bg: #0b0f19;
+  --clr-section-bg: #0b0f19;
+  --clr-icon-bg: #2c313d;
+  --clr-icon: #ffffff;
+  --clr-icon-open: #ffffff;
+  --clr-faq-bg: #190b13;
+  --clr-border: #404046;
+  --clr-btn-app-bg: #cccdd1;
+}
 
 * {
   box-sizing: border-box;
@@ -73,13 +89,26 @@ body {
 }
 
 a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: left;
   color: var(--clr-primary);
   text-decoration: none;
+
+  .company-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--clr-headline);
+    text-decoration: none;
+  }
 }
 
 a:hover {
   color: var(--clr-primary);
-  text-decoration: underline;
+  .nav-link {
+    text-decoration: underline;
+  }
 }
 
 .btn-primary {
@@ -104,7 +133,7 @@ a:hover {
 }
 
 .btn-download-app {
-  background-color: var(--clr-headline);
+  background-color: var(--clr-btn-app-bg);
   color: var(--clr-text-btn);
   border-radius: 8px;
   padding: 12px 25px;
